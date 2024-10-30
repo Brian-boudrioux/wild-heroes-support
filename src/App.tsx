@@ -1,11 +1,20 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import heroes from './data.json';
+import HeroesList from './components/HeroesList';
+import HeroesDetail from './components/HeroesDetail';
+
+const router = createBrowserRouter([
+  {path: '/', element: <HeroesList heroes={heroes} />},
+  {path: '/:id', element: <HeroesDetail />}
+])
 
 function App() {
-  // todo log data here
+  console.log(heroes);
   
   return (
     <>
-      todo : call HeroesList component here
+      <RouterProvider router={router} />
     </>
   )
 }
