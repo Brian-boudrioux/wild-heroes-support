@@ -1,0 +1,53 @@
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+.heroes-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroes-list>input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border-color: rgb(27, 27, 63);;
+}
+
+.heroes-list>div {
+  margin-top: 10px;
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.heroes-list>div>button:hover {
+  background: rgb(27, 27, 63);
+}
+
+.heroes-list>section {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-card {
+  min-width: 250px;
+  width: 25%;
+  padding: 5px;
+  border: 3px solid rgb(27, 27, 63);
+  box-shadow: 3px 3px 3px 3px rgb(27, 27, 63);
+}
+
+.hero-card img {
+  width: 100%;
+}
