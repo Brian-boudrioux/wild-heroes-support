@@ -10,10 +10,10 @@ function HeroesDetail() {
     <article className="hero-detail">
       <button onClick={() => navigate("/")}>back to the list</button>
       <h3>
-        {heroe.name}
+        {heroe?.name}
       </h3>
       {heroe?.images?.sm && <img src={heroe?.images?.lg} />}
-      <p>{heroe.biography?.alignment}</p>
+      <p>{heroe?.biography?.alignment}</p>
     </article>
   );
 }
