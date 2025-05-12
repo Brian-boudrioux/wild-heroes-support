@@ -1,12 +1,15 @@
 import './App.css';
+import { Outlet } from 'react-router';
 
 function App() {
   // todo log data here
   
   return (
     <>
-      todo : call HeroesList component here
-    </>
+			<header>My hero App</header>
+      <Outlet />
+			<footer>@copyright 2025 wildcodeschool</footer>
+		</>
   )
 }
 

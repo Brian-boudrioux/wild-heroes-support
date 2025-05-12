@@ -1,11 +1,13 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router";
 
-function HeroesItem() {
+function HeroesItem({hero}) {
+
+	const navigate = useNavigate();
 
   return (
-    <article className='hero-card'>
-      todo : show hero data here
+    <article className='hero-card' onClick={() => navigate(`/heroes/${hero.id}`)}>
+      <img src={hero.images.sm} alt='heroimg' />
+			<p>{hero.name}</p>
     </article>
   );
 }
