@@ -6,7 +6,7 @@ Clone le projet et installe les dépendances avec la commande `npm i`
 
 ## 1. Data
 
-Dans le composant `<App />`, `import` le fichier `data.json` afin de récupérer la liste des héros et fait un `console.log` du résultat.
+Dans le composant `<App />`, `fetch` l'api [data.json](https://akabab.github.io/superhero-api/api/) via un `useeffect` et stock le retour dans un state.
 
 ## 2. Liste
 
