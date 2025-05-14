@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import HeroesItem from "./HeroesItem";
+import HeroesItem from "../components/HeroesItem";
 
 function HeroesList() {
 

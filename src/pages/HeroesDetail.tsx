@@ -1,10 +1,14 @@
 import { useParams } from "react-router";
 import { useState, useEffect } from "react";
+import favoriteContext from "../context/favorites";
+import { useContext } from "react";
+import FavoriteButton from "../components/FavoriteButton";
 
 function HeroesDetail() {
 
 	const { id } = useParams();
 	const [heroDetails, setHeroDetails] = useState(null);
+	const {favorites, setFavorites, isFavorite, removeFavorite} = useContext(favoriteContext);
 
 	useEffect(() => {
 		const getHeroDetails = async () => {
@@ -27,6 +31,13 @@ function HeroesDetail() {
 						{heroDetails.biography.aliases.map((alias) => (
 							<p>{alias}</p>
 						))}
+						<FavoriteButton
+							favorites={favorites}
+							setFavorites={setFavorites}
+							isFavorite={isFavorite}
+							removeFavorite={removeFavorite}
+							hero={heroDetails}
+						/>
 					</article>
 				)}
 			</>
